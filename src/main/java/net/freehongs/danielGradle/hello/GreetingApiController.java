@@ -26,6 +26,7 @@ public class GreetingApiController {
 
   @GetMapping("/hello.do")
   public String hello(){
+    log.info("say hello");
     return "hello springboot world";
   }
 }
