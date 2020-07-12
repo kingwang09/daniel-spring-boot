@@ -1,4 +1,4 @@
-package net.freehongs.danielGradle;
+package net.freehongs.daniel;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

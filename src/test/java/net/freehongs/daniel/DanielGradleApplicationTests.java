@@ -1,4 +1,4 @@
-package net.freehongs.danielGradle;
+package net.freehongs.daniel;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
