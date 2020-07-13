@@ -4,13 +4,22 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
+
 @Slf4j
+@RestController
 @SpringBootApplication
 public class DanielGradleApplication extends SpringBootServletInitializer {
+
+  @GetMapping("/index.do")
+  public String index(){
+    return "daniel spring boot world!!";
+  }
 
   private static final Map<String, Object> DEFAULT_PROPS = new HashMap<>();
 
