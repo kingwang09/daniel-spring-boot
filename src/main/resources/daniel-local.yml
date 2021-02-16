@@ -12,9 +12,13 @@ spring:
   daniel:
     datasource:
       driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:tcp://localhost/~/daniel
+      #jdbc-url: jdbc:h2:tcp://localhost/~/daniel
+      jdbc-url: jdbc:h2:mem:daniel
       username: sa
       password:
+  h2:
+    console:
+      enabled: true
 logging:
   level:
     com.zaxxer.hikari: DEBUG
