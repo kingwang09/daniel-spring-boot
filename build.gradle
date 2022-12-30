@@ -2,11 +2,10 @@ plugins {
     id 'org.springframework.boot' version '2.1.8.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
-    id 'war'
 }
 
 group = 'net.freehongs'
-version = '0.0.1-SNAPSHOT'
+version = ''
 sourceCompatibility = '1.8'
 
 configurations {
@@ -27,7 +26,6 @@ dependencies {
     runtimeOnly 'com.h2database:h2:1.4.200'
     runtimeOnly 'mysql:mysql-connector-java:5.1.26'
     annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
@@ -37,7 +35,8 @@ test {
     useJUnitPlatform()
 }
 
-bootJar {
-    enabled = true
-    launchScript()
+
+bootJar{
+    archivesBaseName = 'main'
+//    archiveFileName = 'main.jar'
 }
