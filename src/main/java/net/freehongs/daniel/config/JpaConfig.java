@@ -1,5 +1,6 @@
 package net.freehongs.daniel.config;
 
+import org.hibernate.dialect.MariaDBDialect;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
