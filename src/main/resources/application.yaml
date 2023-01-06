@@ -13,7 +13,7 @@ spring:
     datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       #jdbc-url: jdbc:h2:tcp://localhost/~/daniel
-      jdbc-url: jdbc:mariadb://svc.gksl2.cloudtype.app:32338/daniel
+      jdbc-url: jdbc:mariadb://mariadb:3306/daniel
       username: hyungeun
       password: jesusinlove0123
   h2:
