@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version '2.7.3'
+    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
 }
 
 group = 'net.freehongs'
 version = ''
-sourceCompatibility = '1.8'
+sourceCompatibility = '1.11'
 
 configurations {
     compileOnly {
