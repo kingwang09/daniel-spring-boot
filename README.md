@@ -9,4 +9,4 @@ freehongs spring-boot version
 실행 자체가 되지 않음.
 (구동하려고 할 경우, 톰캣 버전 이슈)
 
-- git ssh setting test2
+- git ssh setting test3
