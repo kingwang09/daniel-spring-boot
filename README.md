@@ -8,3 +8,5 @@ freehongs spring-boot version
 내장 톰캣을 사용할 수 없기 때문에..
 실행 자체가 되지 않음.
 (구동하려고 할 경우, 톰캣 버전 이슈)
+
+- git ssh setting test
