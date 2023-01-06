@@ -21,8 +21,8 @@ public class ElasticRestController {
     private final ElasticExampleRepository repository;
 
     @GetMapping("/all")
-    public List<ElasticExample> getAll(@RequestParam String name, @RequestParam String value){
-        log.debug("elastic getAll: name={}, value={}", name, value);
+    public List<ElasticExample> getAll(){
+        log.debug("elastic getAll");
         Page<ElasticExample> result = repository.findAll(PageRequest.of(0, 10));
         log.debug("total Count: {}", result.getTotalElements());
         return result.getContent();
