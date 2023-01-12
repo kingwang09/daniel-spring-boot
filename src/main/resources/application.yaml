@@ -5,10 +5,10 @@ spring:
         dialect: org.hibernate.dialect.MariaDBDialect
         show_sql: true
         format_sql: true
-        hbm2ddl.auto: create
+        hbm2ddl.auto: update
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
   daniel:
     datasource:
       driver-class-name: org.mariadb.jdbc.Driver
