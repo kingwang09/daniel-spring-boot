@@ -43,4 +43,8 @@ public class AccountService implements UserDetailsService {
         return account.toDto();
     }
 
+    public AccountDto getOne(Long id){
+        return accountRepository.findById(id).orElseThrow(() -> new NoSuchElementException(id+"의 회원번호는 존재하지 않거나 올바르지 않습니다.")).toDto();
+    }
+
 }

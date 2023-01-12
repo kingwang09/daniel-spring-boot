@@ -1,6 +1,5 @@
 package net.freehongs.daniel.domain.account.model;
 
-import lombok.Builder;
 import lombok.Getter;
 import org.springframework.security.core.userdetails.User;
 
