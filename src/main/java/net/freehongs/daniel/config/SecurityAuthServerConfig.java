@@ -40,9 +40,9 @@ public class SecurityAuthServerConfig implements AuthorizationServerConfigurer {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("clientId")
+                .secret(passwordEncoder.encode("raw_password"))
                 .authorizedGrantTypes("password", "refresh_token")
                 .scopes("read", "write")
-                .secret(passwordEncoder.encode("raw_password"))
                 .accessTokenValiditySeconds(60 * 10)//10분
                 .refreshTokenValiditySeconds(60 * 10 * 6);//1시간
     }
