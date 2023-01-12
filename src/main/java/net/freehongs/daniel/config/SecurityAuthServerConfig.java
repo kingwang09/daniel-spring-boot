@@ -39,8 +39,13 @@ public class SecurityAuthServerConfig implements AuthorizationServerConfigurer {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
+                //Basic Auth(Authorization: clientId & raw_password)
+                //url: POST /oauth/token
+                //params: username, password, grant_type=password
+
                 .withClient("clientId")
                 .secret(passwordEncoder.encode("raw_password"))
+
                 .authorizedGrantTypes("password", "refresh_token")
                 .scopes("read", "write")
                 .accessTokenValiditySeconds(60 * 10)//10분
