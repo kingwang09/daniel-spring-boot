@@ -12,7 +12,6 @@ spring:
   daniel:
     datasource:
       driver-class-name: org.mariadb.jdbc.Driver
-      #jdbc-url: jdbc:h2:tcp://localhost/~/daniel
       jdbc-url: jdbc:mariadb://mariadb:3306/daniel
       username: hyungeun
       password: jesusinlove0123
@@ -22,6 +21,10 @@ spring:
   elasticsearch:
     url: elasticsearch
     port: 9200
+  security:
+    client:
+      id: daniel-spring-boot
+      secret: jesusinlove
 logging:
   level:
     net.freehongs.daniel: DEBUG

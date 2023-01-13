@@ -2,6 +2,7 @@ package net.freehongs.daniel.config;
 
 import lombok.RequiredArgsConstructor;
 import net.freehongs.daniel.domain.account.service.AccountService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -25,6 +26,11 @@ public class SecurityAuthServerConfig implements AuthorizationServerConfigurer {
     private final AccountService accountService;
     private final TokenStore tokenStore;
 
+    @Value("${spring.security.client.id}")
+    private String clientId;
+    @Value("${spring.security.client.secret}")
+    private String clientSecret;
+
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.passwordEncoder(passwordEncoder);
@@ -43,8 +49,8 @@ public class SecurityAuthServerConfig implements AuthorizationServerConfigurer {
                 //url: POST /oauth/token
                 //params: username, password, grant_type=password
 
-                .withClient("clientId")
-                .secret(passwordEncoder.encode("raw_password"))
+                .withClient(clientId)
+                .secret(passwordEncoder.encode(clientSecret))
 
                 .authorizedGrantTypes("password", "refresh_token")
                 .scopes("read", "write")
