@@ -13,8 +13,7 @@ import java.util.Set;
  * TODO
  * - validation 추가 필요
  */
-@Getter
-@ToString
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
