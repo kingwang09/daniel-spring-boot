@@ -24,6 +24,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
 
+    //oauth2
+    implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.3.9.RELEASE'
+
     //mariadb
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.0'
     runtimeOnly 'com.h2database:h2:1.4.200'
@@ -35,6 +38,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    testImplementation('org.springframework.security:spring-security-test')
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 }
