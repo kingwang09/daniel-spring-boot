@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        format_sql: true
+        hbm2ddl.auto: create
+    hibernate:
+      ddl-auto: create
+  daniel:
+    datasource:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:daniel
+      username: sa
+      password:
+  h2:
+    console:
+      enabled: true
+  elasticsearch:
+    url: localhost
+    port: 9200
+logging:
+  level:
+    net.freehongs.daniel: DEBUG
+    com.zaxxer.hikari: DEBUG
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
+

@@ -1,15 +1,13 @@
 package net.freehongs.daniel.domain.account.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 
 @ToString
 @Getter
 @Embeddable
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
