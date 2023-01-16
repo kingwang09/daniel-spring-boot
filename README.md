@@ -6,6 +6,9 @@ CloudType 사용 중
   - @Deprecated 된 방식이라서 개선이 필요함.
 
 # 2023년 일일 커밋 기록
+- 1/16(월)
+  - PR 리뷰
+  - 쇼핑몰 도메인 리팩토링
 - 1/13(금)
   - spring-boot-test mock 테스트 기능 구현
   - spring-security 테스트 케이스 작성
