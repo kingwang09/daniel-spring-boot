@@ -3,11 +3,9 @@ package net.freehongs.daniel.domain.shop.model;
 import lombok.*;
 import net.freehongs.daniel.domain.shop.constant.OrderItemStatus;
 import net.freehongs.daniel.domain.shop.dto.OrderItemResponseDto;
-import net.freehongs.daniel.domain.shop.dto.OrderResponseDto;
 
 import javax.persistence.*;
 
-@ToString
 @Getter
 @Builder
 @AllArgsConstructor

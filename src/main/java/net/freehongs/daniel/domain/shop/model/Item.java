@@ -9,7 +9,6 @@ import net.freehongs.daniel.support.jpa.AbstractDateAuditingEntity;
 import javax.persistence.*;
 
 
-@ToString
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
