@@ -12,7 +12,6 @@ spring:
   daniel:
     datasource:
       driver-class-name: org.mariadb.jdbc.Driver
-      #jdbc-url: jdbc:h2:tcp://localhost/~/daniel
       jdbc-url: jdbc:mariadb://localhost:3306/daniel
       username: hyungeun
       password: qwer123$
