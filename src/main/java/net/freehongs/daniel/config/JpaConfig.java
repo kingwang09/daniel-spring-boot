@@ -1,6 +1,5 @@
 package net.freehongs.daniel.config;
 
-import org.hibernate.dialect.MariaDBDialect;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -18,24 +17,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-/**
- * @Class JpaConfig
- * @Description
- * @Author hyungeun.jin
- * @Since 2020. 7. 12.
- * @Version 1.0
- * @COPYRIGHT © WADIZ ALL RIGHTS RESERVED.
- * ------------------------------------------------------------------------
- * Modification Information
- * ------------------------------------------------------------------------
- * 수정일 || 수정자 || 수정내용
- * ------------------------------------------------------------------------
- * 2020. 7. 12. || 진형은 || 최초생성
- */
 @Configuration
 @EnableJpaRepositories(
-        entityManagerFactoryRef = "entityManagerFactory",
-        transactionManagerRef = "transactionManager",
         basePackages = {
                 "net.freehongs.daniel.domain.*.repository"
         }
